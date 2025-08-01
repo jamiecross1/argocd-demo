@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rancher-demo
+  labels:
+    app: rancher-demo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rancher-demo
+  template:
+    metadata:
+      labels:
+        app: rancher-demo
+    spec:
+      containers:
+      - name: rancher-demo
+        image: docker.io/monachus/rancher-demo:v1.4.1
+        ports:
+        - containerPort: 8080
