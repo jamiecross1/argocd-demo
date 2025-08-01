@@ -5,7 +5,7 @@ metadata:
   labels:
     app: rancher-demo
 spec:
-  replicas: 30
+  replicas: 16
   selector:
     matchLabels:
       app: rancher-demo
